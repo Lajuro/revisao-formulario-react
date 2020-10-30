@@ -1,31 +1,70 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
   outline: none;
   box-sizing: border-box;
+}
+
+body {
+  font-size: 17.6px;
 }
 
 .todolist {
   background-color: #FF6666;
   padding: 2rem 3rem 3rem;
   max-width: 500px;
+  width: 100%;
   color: #FFF;
   box-shadow: -20px -20px 0px 0px rgba(100,100,100,.1);
 }
 
+.todolist .secondary {
+  text-align: center;
+  letter-spacing: .05em;
+  font-style: italic;
+  opacity: 0.8;
+  margin: 2.6rem 0;
+}
+
 .todolist header {
   margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+.todolist header h1 {
+  font-weight: normal;
+  font-size: 2.6rem;
+  letter-spacing: 0.05em;
+}
+
+.todolist header p {
+  font-weight: normal;
+  font-size: 0.8rem;
+  margin-bottom: 0.7rem;
+  margin-left: 3px;
+  margin-top: 0.2rem;
+}
+
+.todolist .task label {
+  cursor: pointer;
 }
 
 .todolist label {
   display: block;
-  font-weight: bold;
+  font-weight: normal;
   margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  transition: opacity .2s linear;
 }
 
 .todolist input[type=text], button {
   padding: 0.5rem;
+  border: none;
+}
+
+.todolist input[type=text] {
+  width: 75%;
 }
 
 button {
@@ -36,7 +75,12 @@ button {
   border: 1px solid rgba(255,255,255,.3);
   margin-left: 5px;
   cursor: pointer;
-  transition: background .2s ease-out;
+  transition: background .2s ease-out, color .2s ease-out;
+}
+
+button:hover {
+  background-color: #FFFFFF;
+  color: #FF6666;
 }
 
 .todolist .tasks{
@@ -47,11 +91,15 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0 -3rem 4px;
+  padding: 1.1rem 3rem;
+  background: rgba(255,255,255,0.1);
 }
 
 .todolist .task.done label {
   text-decoration: line-through;
+  font-style: italic;
+  opacity: .6;
 }
 
 .todolist .task label,
@@ -67,5 +115,23 @@ button {
 }
 
 .todolist .task input[type=checkbox] {
-  display: block;
+  display: none;
+}
+
+.todolist footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist footer section.form-add {
+  width: 100%;
+}
+
+.todolist footer section.form-group {
+  display: flex;
+}
+
+.todolist footer section.form-group button {
+  width: 25%;
 }

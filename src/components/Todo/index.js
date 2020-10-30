@@ -64,14 +64,18 @@ function Todo() {
         <p>Get things done, one item at a time.</p>
       </header>
       <main className="tasks">
-        {tarefas.map(tarefa => (
+        {tarefas.length === 0 ? <p className="secondary">Your todo list is empty.</p> : tarefas.map(tarefa => (
           <Tarefa tarefa={tarefa} acao={atualizarEstadoTarefa} excluir={excluir} />
         ))}
       </main>
       <footer>
-        <label htmlFor="task">Add to the todo list</label>
-        <input type="text" id="task" />
-        <button onClick={adicionarTarefa}>ADD ITEM</button>
+        <section className="form-add">
+          <label htmlFor="task">Add to the todo list</label>
+          <section className="form-group">
+            <input type="text" id="task" />
+            <button onClick={adicionarTarefa}>ADD ITEM</button>
+          </section>
+        </section>
       </footer>
     </div>
   )
