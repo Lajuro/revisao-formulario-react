@@ -5,3 +5,7 @@
 ## Objetivo
 
 Neste projeto o objetivo foi fazer uma aplicação de lista de afazeres com React, com as principais funções que é adicionar, concluir e excluir tarefas.
+
+## Acesse a aplicação
+
+Você pode acessar a aplicação [clicando aqui](https://revisao-formularios-react.herokuapp.com/).
