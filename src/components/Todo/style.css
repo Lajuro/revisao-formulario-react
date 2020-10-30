@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.todolist {
+  background-color: #FF6666;
+  padding: 2rem 3rem 3rem;
+  max-width: 500px;
+  color: #FFF;
+  box-shadow: -20px -20px 0px 0px rgba(100,100,100,.1);
+}
+
+.todolist header {
+  margin-bottom: 1.5rem;
+}
+
+.todolist label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.todolist input[type=text], button {
+  padding: 0.5rem;
+}
+
+button {
+  background: #FF6666;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid rgba(255,255,255,.3);
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background .2s ease-out;
+}
+
+.todolist .tasks{
+  margin: 1.5rem 0;
+}
+
+.todolist .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.todolist .task.done label {
+  text-decoration: line-through;
+}
+
+.todolist .task label,
+.todolist .task input[type=checkbox],
+.todolist .task button {
+  display: block;
+}
+
+.todolist .task div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist .task input[type=checkbox] {
+  display: block;
+}
