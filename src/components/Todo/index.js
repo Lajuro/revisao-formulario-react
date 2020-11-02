@@ -31,6 +31,7 @@ function Todo() {
   }
 
   function adicionarTarefa(e) {
+    e.preventDefault();
     let campo = document.getElementById('task');
     
     // 1 - Criar um ID
@@ -69,13 +70,15 @@ function Todo() {
         ))}
       </main>
       <footer>
-        <section className="form-add">
-          <label htmlFor="task">Add to the todo list</label>
-          <section className="form-group">
-            <input type="text" id="task" />
-            <button onClick={adicionarTarefa}>ADD ITEM</button>
+        <form onSubmit={adicionarTarefa}>
+          <section className="form-add">
+            <label htmlFor="task">Add to the todo list</label>
+            <section className="form-group">
+              <input type="text" id="task" />
+              <button type="submit">ADD ITEM</button>
+            </section>
           </section>
-        </section>
+        </form>
       </footer>
     </div>
   )
