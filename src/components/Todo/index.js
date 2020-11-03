@@ -74,7 +74,7 @@ function Todo() {
           <section className="form-add">
             <label htmlFor="task">Add to the todo list</label>
             <section className="form-group">
-              <input type="text" id="task" />
+              <input type="text" id="task" autoComplete="off" />
               <button type="submit">ADD ITEM</button>
             </section>
           </section>

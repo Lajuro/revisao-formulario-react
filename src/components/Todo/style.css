@@ -129,6 +129,10 @@ button:hover {
   align-items: center;
 }
 
+.todolist form {
+  width: 100%;
+}
+
 .todolist footer section.form-add {
   width: 100%;
 }
@@ -139,4 +143,13 @@ button:hover {
 
 .todolist footer section.form-group button {
   width: 25%;
+}
+
+@media only screen and (max-width: 600px) {
+  .todolist {
+    width: 100%;
+    height: calc(100% - 2rem);
+    margin: 1rem;
+    box-shadow: none;
+  }
 }
